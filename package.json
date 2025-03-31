@@ -1,0 +1,42 @@
+{
+  "name": "assignment-one",
+  "version": "1.0.0",
+  "description": "Cypress with Cucumber testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:record": "cypress run --record --key your-record-key",
+    "cy:verify": "cypress verify",
+    "cy:version": "cypress version"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "testing",
+    "e2e"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^14.2.1",
+    "esbuild": "^0.25.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "C:/Users/Evolve/Desktop/Assignment-one/cypress/e2e/**/*.{js,ts}",
+    "json": {
+      "enabled": false
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-messages.ndjson"
+    },
+    "filterSpecs": true,
+    "omitFiltered": true
+  }
+}
